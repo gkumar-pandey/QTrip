@@ -49,13 +49,16 @@
 .tile {
     /* border: 1px solid red; */
     position: relative;
-    /* border-radius: 10px; */
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%;
 }
 .tile img{
     object-fit: fill;
     border-radius: 10px;
     transition: transform 0.2s ease-out;
-    height: 400px;
+    height: 100%;
+    width: 100%;
 }
 .img-fluid:hover {
     filter: brightness(0.6);
@@ -73,10 +76,19 @@
     font-weight: bold;
     text-transform: uppercase;
 }
- 
+.adventure-card img {
+    transition: all 0.3s ease-out;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+ .adventure-card img:hover {
+    filter: brightness(0.5);
+}
+
 footer {
     /* border: 1px solid red; */
     background-color: rgb(228, 227, 227);
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
